@@ -1,2 +1,20 @@
-<img src="https://i.imgur.com/uYPBJse.png" alt="Auth Component">
-<img src="https://i.imgur.com/q66RIkY.png" alt="Login Team">
+<img id="headerImage">
+
+<script>
+    let images = ["https://i.imgur.com/uYPBJse.png", "https://i.imgur.com/q66RIkY.png"];
+    let imgElement = document.getElementById("headerImage");
+    let currentImage = 0;
+
+    function increment() {
+        currentImage = currentImage === 0 ? 1 : 0;
+    }
+
+    function updateImage() {
+        imgElement.src = images[currentImage];
+    }
+
+    setInterval(() => {
+        increment();
+        updateImage();
+    }, 1000)
+</script>
